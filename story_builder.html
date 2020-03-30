@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Jeff Kildea">
+    <meta name="description" content="A Simple JS Story Builder">
+    <title>JS Story Builder</title>
+</head>
+<body>
+    <h1>Story Maker</h1>
+    <form>
+        <label for="name">A Name</label><br>
+        <input type="text" id="name" name="name" value="Boaty McBoat-Face"><br>
+
+        <label for="adjective">Adjective</label><br>
+        <input type="text" id="adjective" name="adjective" value="tasty"><br>
+
+        <label for="noun">Noun</label><br>
+        <input type="text" id="noun" name="noun" value="sandwich"><br>
+
+        <button id="submit" type="button" value="Submit">Submit</button>
+    </form>
+    
+    <p id="textField"></p>
+    
+    <script>
+
+        // define variables
+        var name = document.getElementById("name").value;
+        var adjective = document.getElementById("adjective").value;
+        var noun = document.getElementById("noun").value;
+        
+
+        // Call function on click
+        document.getElementById("submit").addEventListener("click", writeStory, false);
+
+        // function to output story
+        function writeStory() {
+            
+            document.getElementById("textField").innerHTML = "<p>" + name + " would like a " + adjective + " " + noun + ".</p>";
+
+        }
+    </script>
+</body>
+</html>
